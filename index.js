@@ -1,31 +1,34 @@
-var QS					=	require("qs")
-var request			=	require('request')
-var xml2json		=	require('xml2json')
+var Api           = require('./api')
+var UserMgmt      = require('./userMgmt')
+var CardMgmt      = require('./cardMgmt')
 
-var host  = null
-var aKey  = null
-var pKey  = null
+var PATH_INIT           =	'/vwapi/Init'
+var PATH_PAY            =	'/vwapi/Pay'
+var PATH_PAY_SUBMIT_3DS =	'/vwapi/PaySubmit3DS'
 
-module.exports = function(paytureHost, addKey, payKey) {
+var API = null
 
-  host  = paytureHost
-  aKey  = addKey
-  pKey  = payKey
+module.exports = function(host) {
+  var API = new Api(host)
 
-  checkArgs()
+  this.users = new UserMgmt(API)
+  this.cards = new CardMgmt(API)
 
-  function checkArgs() {
-    if (typeof host != 'string') {
-      throw console.error("Host must be a String");
-    }
-    if (typeof aKey != 'string') {
-      throw console.error("aKey must be a String");
-    }
-    if (typeof pKey != 'string') {
-      throw console.error("pKey must be a String");
-    }
+  this.init = function(vwid, data, cb) {
+    API.request(PATH_INIT, vwid, data, function(err, data) {
+      cb(err, data)
+    })
   }
 
-  console.log("Welcome to the Payture API for NodeJS");
+  this.pay = function(vwid, data, cb) {
+    API.request(PATH_PAY, vwid, data, function(err, data) {
+      cb(err, data)
+    })
+  }
 
+  this.paySubmit3ds = function(vwid, data, cb) {
+    API.request(PATH_PAY_SUBMIT_3DS, vwid, data, function(err, data) {
+      cb(err, data)
+    })
+  }
 }
