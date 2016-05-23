@@ -1,2 +1,2 @@
-# node-payture
-Payture API for NodeJS
+# node-payture-ewallet
+Payture eWallet API for NodeJS
