@@ -4,8 +4,8 @@ Payture API for NodeJS. To get started with Payture, you will need an account, p
 ## Getting Started
 
 ### What you need
-[x] Payture Host
-[x] Merchant Account(s)
+[X] Payture Host
+[X] Merchant Account(s)
 
 ### Install
 **npm**
@@ -15,7 +15,7 @@ npm install -save payture
 
 ### Initialize
 ```node
-var PaytureAPI  = require('node-payture-ewallet')
+var PaytureAPI  = require('payture')
 var api         = new Payture(PAYTURE_HOST)
 ```
 
@@ -24,25 +24,21 @@ var api         = new Payture(PAYTURE_HOST)
 ### eWallet
 #### Init
 ```node
-api.init(MERCHANT, data, callback)
+api.wallet.init(MERCHANT, data, callback)           // Init
 ```
 #### Pay
 ```node
-api.pay(MERCHANT, data, callback)
+api.wallet.pay(MERCHANT, data, callback)            // Pay
 ```
 #### PaySubmit3DS
 ```node
-api.paySubmit3ds(MERCHANT, data, callback)
+api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
-
 ### User Management
-#### Register
 ```node
-api.users.register(MERCHANT, data, callback)
+api.wallet.users.register(MERCHANT, data, callback) // Register
 ```
-
 ### Card Management
-#### GetList
-  ```node
-  api.cards.getList(MERCHANT, data, callback)
-  ```
+```node
+api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
+```
