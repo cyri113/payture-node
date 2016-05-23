@@ -1,14 +1,14 @@
 {
-  "name": "payture-ewallet-nodejs",
+  "name": "payture",
   "version": "1.0.0",
-  "description": "Payture eWallet API for NodeJS",
+  "description": "Payture API for NodeJS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cderche/node-payture-ewallet.git"
+    "url": "git+https://github.com/cderche/payture-node.git"
   },
   "keywords": [
     "Payture",
@@ -22,9 +22,9 @@
   "author": "Cyrille Derche",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cderche/node-payture-ewallet/issues"
+    "url": "https://github.com/cderche/payture-node/issues"
   },
-  "homepage": "https://github.com/cderche/node-payture-ewallet#readme",
+  "homepage": "https://github.com/cderche/payture-node#readme",
   "dependencies": {
     "qs": "^6.2.0",
     "request": "^2.72.0",
