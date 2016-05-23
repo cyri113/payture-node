@@ -1,0 +1,27 @@
+{
+  "name": "payture-nodejs",
+  "version": "1.0.0",
+  "description": "Payture API for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cderche/node-payture.git"
+  },
+  "keywords": [
+    "Payture",
+    "API",
+    "NodeJS",
+    "Payment",
+    "Processing",
+    "Russia"
+  ],
+  "author": "Cyrille Derche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cderche/node-payture/issues"
+  },
+  "homepage": "https://github.com/cderche/node-payture#readme"
+}
