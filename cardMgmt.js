@@ -1,11 +1,8 @@
-var API       = null
+var API = null
 
 var PATH_LIST	=	'/vwapi/GetList'
 
 module.exports = function(api) {
-  if (!api) {
-    throw new Error("PaytureAPI must be provided.")
-  }
 
   API = api
 
