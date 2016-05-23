@@ -1,4 +1,4 @@
-# payture-node
+# Payture.com API for NodeJS
 Payture API for NodeJS. To get started with Payture, you will need an account, please contact [Payture](http://payture.com/) directly. Please also note that this module was not developed by Payture.
 
 ## Getting Started
@@ -36,7 +36,7 @@ api.wallet.users.register(MERCHANT, data, callback) // Register
 ### Card Management
 - [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```node
-api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
+api.wallet.cards.getList(MERCHANT, data, callback)  // [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```
 
 ## 3DSecure
