@@ -1,3 +1,7 @@
+var QS					=	require("qs")
+var request			=	require('request')
+var xml2json		=	require('xml2json')
+
 var host  = null
 var aKey  = null
 var pKey  = null
