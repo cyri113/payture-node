@@ -36,7 +36,7 @@ api.wallet.users.register(MERCHANT, data, callback) // Register
 ### Card Management
 - [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```node
-api.wallet.cards.getList(MERCHANT, data, callback)  // [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
+api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
 ## 3DSecure
