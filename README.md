@@ -19,19 +19,28 @@ var PaytureAPI  = require('payture')
 var api         = new Payture(PAYTURE_HOST)
 ```
 
-## API Calls
+## eWallet
+- [Init](http://payture.com/integration/api/#payture-ewallet_init_)
+- [Pay](http://payture.com/integration/api/#payture-ewallet_pay_)
 
-### eWallet
 ```node
 api.wallet.init(MERCHANT, data, callback)           // Init
 api.wallet.pay(MERCHANT, data, callback)            // Pay
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
-#### User Management
+### User Management
+- [Register](http://payture.com/integration/api/#payture-ewallet_user-management_register_)
 ```node
 api.wallet.users.register(MERCHANT, data, callback) // Register
 ```
-#### Card Management
+### Card Management
+- [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```node
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
+```
+
+## 3DSecure
+- [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
+```node
+api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
