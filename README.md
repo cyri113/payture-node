@@ -4,8 +4,8 @@ Payture API for NodeJS. To get started with Payture, you will need an account, p
 ## Getting Started
 
 ### What you need
-[X] Payture Host
-[X] Merchant Account(s)
+1. Payture Host
+2. Merchant Account(s)
 
 ### Install
 **npm**
