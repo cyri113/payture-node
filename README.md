@@ -22,16 +22,9 @@ var api         = new Payture(PAYTURE_HOST)
 ## API Calls
 
 ### eWallet
-#### Init
 ```node
 api.wallet.init(MERCHANT, data, callback)           // Init
-```
-#### Pay
-```node
 api.wallet.pay(MERCHANT, data, callback)            // Pay
-```
-#### PaySubmit3DS
-```node
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
 ### User Management
