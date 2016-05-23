@@ -1,11 +1,11 @@
-# payture-node
+# Payture.com API for NodeJS
 Payture API for NodeJS. To get started with Payture, you will need an account, please contact [Payture](http://payture.com/) directly. Please also note that this module was not developed by Payture.
 
 ## Getting Started
 
 ### What you need
-[x] Payture Host
-[x] Merchant Account(s)
+1. Payture Host
+2. Merchant Account(s)
 
 ### Install
 **npm**
@@ -15,34 +15,32 @@ npm install -save payture
 
 ### Initialize
 ```node
-var PaytureAPI  = require('node-payture-ewallet')
+var PaytureAPI  = require('payture')
 var api         = new Payture(PAYTURE_HOST)
 ```
 
-## API Calls
-
-### eWallet
-#### Init
+## Payture eWallet
+- [Init](http://payture.com/integration/api/#payture-ewallet_init_)
 ```node
-api.init(MERCHANT, data, callback)
+api.wallet.init(MERCHANT, data, callback)           // Init
 ```
-#### Pay
+- [Pay](http://payture.com/integration/api/#payture-ewallet_pay_)
 ```node
-api.pay(MERCHANT, data, callback)
+api.wallet.pay(MERCHANT, data, callback)            // Pay
 ```
-#### PaySubmit3DS
-```node
-api.paySubmit3ds(MERCHANT, data, callback)
-```
-
 ### User Management
-#### Register
+- [Register](http://payture.com/integration/api/#payture-ewallet_user-management_register_)
 ```node
-api.users.register(MERCHANT, data, callback)
+api.wallet.users.register(MERCHANT, data, callback) // Register
+```
+### Card Management
+- [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
+```node
+api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
-### Card Management
-#### GetList
-  ```node
-  api.cards.getList(MERCHANT, data, callback)
-  ```
+## 3DSecure
+- [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
+```node
+api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
+```
