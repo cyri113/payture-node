@@ -27,11 +27,11 @@ api.wallet.init(MERCHANT, data, callback)           // Init
 api.wallet.pay(MERCHANT, data, callback)            // Pay
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
-### User Management
+#### User Management
 ```node
 api.wallet.users.register(MERCHANT, data, callback) // Register
 ```
-### Card Management
+#### Card Management
 ```node
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
