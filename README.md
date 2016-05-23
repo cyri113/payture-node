@@ -15,7 +15,7 @@ npm install -save payture
 
 ### Initialize
 ```node
-var PaytureAPI  = require('payture')
+var Payture  = require('payture')
 var api         = new Payture(PAYTURE_HOST)
 ```
 
