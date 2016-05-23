@@ -19,12 +19,12 @@ PAY:    DemoMerchantPay
 
 ### Install
 **npm**
-```
+```node
 npm install -save node-payture-ewallet
 ```
 
 ### Initialize
-```
+```node
 var PaytureAPI  = require('node-payture-ewallet')
 var api         = new Payture(PAYTURE_HOST)
 ```
@@ -33,24 +33,24 @@ var api         = new Payture(PAYTURE_HOST)
 
 - User Management
   - Register
-  ```
+  ```node
   api.users.register(MERCHANT, data, callback)
   ```
 
 - Card Management
   - GetList
-  ```
+  ```node
   api.cards.getList(MERCHANT, data, callback)
   ```
 - Init
-```
+```node
 api.init(MERCHANT, data, callback)
 ```
 - Pay
-```
+```node
 api.pay(MERCHANT, data, callback)
 ```
 - PaySubmit3DS
-```
+```node
 api.paySubmit3ds(MERCHANT, data, callback)
 ```
