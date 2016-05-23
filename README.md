@@ -1,7 +1,21 @@
 # node-payture-ewallet
-Payture eWallet API for NodeJS.
+Payture eWallet API for NodeJS. To get started with Payture, you will need an account, please contact [Payture](http://payture.com/) directly. Please also note that this module was not developed by Payture.
 
 ## Getting Started
+
+### What you need
+- Host (you should use the values Payture provides you with)
+```
+i.e.
+TESTING:    https://sandbox.payture.com
+PRODUCTION: https://secure.payture.com
+```
+- Merchant Account (Payture usually provides you with two, one for Add and one for Pay)
+```
+i.e.
+ADD:    DemoMerchantAdd
+PAY:    DemoMerchantPay
+```
 
 ### Install
 **npm**
