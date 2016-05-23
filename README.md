@@ -15,8 +15,8 @@ npm install -save payture
 
 ### Initialize
 ```node
-var Payture  = require('payture')
-var api         = new Payture(PAYTURE_HOST)
+var Payture = require('payture')
+var api     = new Payture(PAYTURE_HOST)
 ```
 
 ## Payture eWallet
