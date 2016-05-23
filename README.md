@@ -25,5 +25,18 @@ var api         = new Payture(PAYTURE_HOST)
 
 - Card Management
   - GetList
+  ```
+  api.cards.getList(MERCHANT, data, callback)
+  ```
 - Init
+```
+api.init(MERCHANT, data, callback)
+```
 - Pay
+```
+api.pay(MERCHANT, data, callback)
+```
+- PaySubmit3DS
+```
+api.paySubmit3ds(MERCHANT, data, callback)
+```
