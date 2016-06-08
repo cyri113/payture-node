@@ -31,7 +31,7 @@ api.wallet.pay(MERCHANT, data, callback)            // Pay
 ### User Management
 [Check](http://payture.com/integration/api/#payture-ewallet_user-management_check_)
 ```node
-api.wallet.users.check(MERCHANT, data, callback) // Register
+api.wallet.users.check(MERCHANT, data, callback) // Check
 ```
 [Register](http://payture.com/integration/api/#payture-ewallet_user-management_register_)
 ```node
