@@ -20,27 +20,31 @@ var api     = new Payture(PAYTURE_HOST)
 ```
 
 ## Payture eWallet
-- [Init](http://payture.com/integration/api/#payture-ewallet_init_)
+[Init](http://payture.com/integration/api/#payture-ewallet_init_)
 ```node
 api.wallet.init(MERCHANT, data, callback)           // Init
 ```
-- [Pay](http://payture.com/integration/api/#payture-ewallet_pay_)
+[Pay](http://payture.com/integration/api/#payture-ewallet_pay_)
 ```node
 api.wallet.pay(MERCHANT, data, callback)            // Pay
 ```
 ### User Management
-- [Register](http://payture.com/integration/api/#payture-ewallet_user-management_register_)
+[Check](http://payture.com/integration/api/#payture-ewallet_user-management_check_)
+```node
+api.wallet.users.check(MERCHANT, data, callback) // Register
+```
+[Register](http://payture.com/integration/api/#payture-ewallet_user-management_register_)
 ```node
 api.wallet.users.register(MERCHANT, data, callback) // Register
 ```
 ### Card Management
-- [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
+[GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```node
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
 ## 3DSecure
-- [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
+[PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
 ```node
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
