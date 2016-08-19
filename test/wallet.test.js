@@ -2,26 +2,32 @@ var should    = require('should')
 var Payture   = require('../index')
 var api       = new Payture(process.env.PAYTURE_HOST)
 var MERCHANT  = process.env.PAYTURE_ADD
+var PASSWORD  = process.env.PAYTURE_PASSWORD
 
-describe('Wallet Processes', function() {
+describe('Wallet', function() {
 
   var user = { 'VWUserLgn': 'test@payture.com', 'VWUserPsw': 'password' }
 
   before(function(done) {
     api.wallet.users.register(MERCHANT, user, function(err, res) {
-      if (err) { throw err }
+      if (err) { throw(err) }
       done()
     })
   })
 
   after(function(done) {
-    api.wallet.users.delete(MERCHANT, user, function(err, res) {
-      if (err) { throw err }
+    data = {
+      'VWUserLgn':  user.VWUserLgn,
+      'Password':   PASSWORD
+    }
+
+    api.wallet.users.delete(MERCHANT, data, function(err, res) {
+      if (err) { throw(err) }
       done()
     })
   })
 
-  it('Create a session', function(done) {
+  it('Init', function(done) {
 
     data = {
       'SessionType': 'Add',
@@ -30,7 +36,7 @@ describe('Wallet Processes', function() {
     }
 
     api.wallet.init(MERCHANT, data, function(err, res) {
-      if (err) { throw err }
+      if (err) { throw(err) }
       res.Init.Success.should.equal('True')
       res.Init.should.have.property('SessionId')
       done()
