@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "4.4.7"
 before_install:
-- sudo apt-get install python=2.7.12-0ubuntu1 -qq [packages list]
+- sudo apt-get install python=2.7.12
