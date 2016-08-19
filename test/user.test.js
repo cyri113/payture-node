@@ -11,7 +11,7 @@ describe('User Processes', function() {
 
   var user = { email: 'test@payture.com', password: 'password' }
 
-  it('Should register the user', function(done) {
+  it('Register the user', function(done) {
     data = {
       'VWUserLgn':  user.email,
       'VWUserPsw':   user.password
@@ -23,7 +23,7 @@ describe('User Processes', function() {
     })
   })
 
-  it('Should check if the user exists', function(done) {
+  it('Check if the user exists', function(done) {
     data = {
       'VWUserLgn':  user.email,
       'VWUserPsw':   user.password
@@ -35,10 +35,10 @@ describe('User Processes', function() {
     })
   })
 
-  it('Should delete the user', function(done) {
+  it('Delete the user', function(done) {
     data = {
       'VWUserLgn':  user.email,
-      'Password':   user.password
+      'Password':   process.env.PAYTURE_PASSWORD
     }
     api.wallet.users.delete(MERCHANT, data, function(err, res) {
       if (err) { throw err }
