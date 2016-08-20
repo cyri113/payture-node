@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cderche/payture-node.svg?branch=wallet-test)](https://travis-ci.org/cderche/payture-node)
+
 # Payture.com API for NodeJS
 Payture API for NodeJS. To get started with Payture, you will need an account, please contact [Payture](http://payture.com/) directly. Please also note that this module was not developed by Payture.
 
@@ -43,8 +45,15 @@ api.wallet.users.register(MERCHANT, data, callback) // Register
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
-## 3DSecure
+### 3DSecure
 [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
 ```node
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
+
+## Testing
+To test the Payture API run the command ```npm test```. Make sure you set the following Environment variables:
+- PAYTURE_HOST
+- PAYTURE_ADD
+- PAYTURE_PAY
+- PAYTURE_PASSWORD
