@@ -9,36 +9,28 @@ var MERCHANT  = process.env.PAYTURE_ADD
 
 describe('User Processes', function() {
 
-  var user = { email: 'test@payture.com', password: 'password' }
+  var user = { 'VWUserLgn': 'test@payture.com', 'VWUserPsw': 'password' }
 
-  it('Should register the user', function(done) {
-    data = {
-      'VWUserLgn':  user.email,
-      'VWUserPsw':   user.password
-    }
-    api.wallet.users.register(MERCHANT, data, function(err, res) {
+  it('Register the user', function(done) {
+    api.wallet.users.register(MERCHANT, user, function(err, res) {
       if (err) { throw err }
       res.Register.Success.should.equal('True')
       done()
     })
   })
 
-  it('Should check if the user exists', function(done) {
-    data = {
-      'VWUserLgn':  user.email,
-      'VWUserPsw':   user.password
-    }
-    api.wallet.users.check(MERCHANT, data, function(err, res) {
+  it('Check if the user exists', function(done) {
+    api.wallet.users.check(MERCHANT, user, function(err, res) {
       if (err) { throw err }
       res.Check.Success.should.equal('True')
       done()
     })
   })
 
-  it('Should delete the user', function(done) {
+  it('Delete the user', function(done) {
     data = {
-      'VWUserLgn':  user.email,
-      'Password':   user.password
+      'VWUserLgn':  user.VWUserLgn,
+      'Password':   process.env.PAYTURE_PASSWORD
     }
     api.wallet.users.delete(MERCHANT, data, function(err, res) {
       if (err) { throw err }
