@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cderche/payture-node.svg?branch=wallet-test)](https://travis-ci.org/cderche/payture-node)
+
 # Payture.com API for NodeJS
 Payture API for NodeJS. To get started with Payture, you will need an account, please contact [Payture](http://payture.com/) directly. Please also note that this module was not developed by Payture.
 
