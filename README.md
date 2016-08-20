@@ -49,8 +49,15 @@ api.wallet.users.delete(MERCHANT, data, callback) // Delete
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
-## 3DSecure
+### 3DSecure
 [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
 ```node
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
+
+## Testing
+To test the Payture API run the command ```npm test```. Make sure you set the following Environment variables:
+- PAYTURE_HOST
+- PAYTURE_ADD
+- PAYTURE_PAY
+- PAYTURE_PASSWORD
