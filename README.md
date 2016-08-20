@@ -45,8 +45,11 @@ api.wallet.users.register(MERCHANT, data, callback) // Register
 api.wallet.cards.getList(MERCHANT, data, callback)  // GetList
 ```
 
-## 3DSecure
+### 3DSecure
 [PaySubmit3DS](http://payture.com/integration/api/#3d-secure_payture-ewallet_)
 ```node
 api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
+
+## Testing
+To test the Payture API run the command ```npm test```.
