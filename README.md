@@ -52,4 +52,8 @@ api.wallet.paySubmit3ds(MERCHANT, data, callback)   // PaySubmit3DS
 ```
 
 ## Testing
-To test the Payture API run the command ```npm test```.
+To test the Payture API run the command ```npm test```. Make sure you set the following Environment variables:
+- PAYTURE_HOST
+- PAYTURE_ADD
+- PAYTURE_PAY
+- PAYTURE_PASSWORD
