@@ -39,6 +39,11 @@ api.wallet.users.check(MERCHANT, data, callback) // Check
 ```node
 api.wallet.users.register(MERCHANT, data, callback) // Register
 ```
+[Delete](http://payture.com/integration/api/#payture-ewallet_user-management_delete_)
+```node
+api.wallet.users.delete(MERCHANT, data, callback) // Delete
+```
+:exclamation: For delete you need to provide the Payture password, **NOT** the user password (or token).
 ### Card Management
 [GetList](http://payture.com/integration/api/#payture-ewallet_card-management_getlist_)
 ```node
